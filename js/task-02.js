@@ -29,10 +29,17 @@ const ingredients = [
 
 const listIngredients = document.querySelector('#ingredients');
 
-ingredients.forEach((ingredient) => {
+ingredients.map((ingredient) => {
   const itemsEl = document.createElement('li');
-  itemsEl.textContent = ingredient;
   itemsEl.classList.add('item');
+  itemsEl.textContent = ingredient;
 
   listIngredients.appendChild(itemsEl);
 });
+
+// const ingredientsList = document.querySelector('#ingredients');
+// const ingredientsEl = ingredients.map(
+//   (ingredient) => `<li class="item">${ingredient}</li>`
+// );
+
+// ingredientsList.insertAdjacentHTML('beforeend', ingredientsEl);

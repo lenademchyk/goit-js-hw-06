@@ -30,6 +30,7 @@ const onInputValidation = (event) => {
 
   if (textInput.length !== InputLength) {
     inputRef.classList.add('invalid');
+    inputRef.classList.remove('valid');
   } else {
     inputRef.classList.replace('invalid', 'valid');
   }

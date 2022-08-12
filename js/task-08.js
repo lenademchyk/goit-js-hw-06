@@ -26,8 +26,11 @@ const OnFormSubmit = (event) => {
   if (email.value.length === 0 || password.value.length === 0) {
     alert('Будь ласка, заповніть всі поля!');
   }
-  console.log(`Email: ${email.value}, Password: ${password.value}`);
-  event.currentTarget.reset();
+
+  if (email.value.length !== 0 && password.value.length !== 0) {
+    console.log(`Email: ${email.value}, Password: ${password.value}`);
+    event.currentTarget.reset();
+  }
 };
 
 formRef.addEventListener('submit', OnFormSubmit);
